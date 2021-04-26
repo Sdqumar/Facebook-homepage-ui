@@ -1,0 +1,64 @@
+.aside {
+    padding: 0rem 0rem 0rem 0.8rem;
+    max-width: 20vw;
+    position: fixed;
+    height: 90vh;
+    font-size: 0.9rem;
+    overflow-y: scroll;
+    scroll-behavior: smooth;
+    display: flex;
+    flex-direction: column;
+    justify-content:space-between;
+    left: 0;
+    
+    ul {
+        display: flex;
+        flex-direction: column;
+        
+            li{
+                display: flex;
+                align-items: center;
+                padding: 0.5rem 0;
+
+                &:nth-child(10){
+                    border-bottom: 1px solid $grey2-color;
+
+                }
+                &:nth-child(11){
+                    font-size: 1.2rem;
+                    color: $grey-color;
+                }
+                &:nth-child(12){
+                    font-size: 1.1rem;
+                }
+                
+                &>i{
+                    @include icon1;
+                    margin: 0;
+                    margin-right: 0.5rem;
+                    vertical-align: baseline;
+            
+                }
+                h4{
+                    font-weight: 540;
+                    display: flex;
+                    flex-direction: column;
+
+                    small{
+                        color: $blue-color;
+                        margin-top: 0.3rem;
+                    }
+                }
+               
+                img:nth-child(1){
+                    @include profile-pic;
+                    width: 2.3rem;
+                }
+
+            }
+    }
+
+    
+}
+
+

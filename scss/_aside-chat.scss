@@ -1,0 +1,147 @@
+.aside-chat{
+    padding-right: 10px;
+    max-width: 20rem;
+    height: 100vh;
+    font-size: 0.9rem;
+    overflow-y: scroll;
+    scroll-behavior: smooth;
+    display: flex;
+    flex-direction: column;
+    position: fixed;
+    right: 0;
+
+  
+    h6{
+        font-size: 1.2rem;
+        color: $grey-color;
+        font-weight: 600;
+    }
+   
+    small{
+        color: $blue-color;
+        display: flex;
+        font-size: 1rem;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    
+    span:nth-child(1){
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        
+    }
+    .friend-request{
+        display: flex;
+        flex-direction: column;
+        border-top: 1px solid $grey1-color;
+        border-bottom: 1px solid $grey1-color;
+        padding: 0.5rem 0;
+        margin: 0.8rem 0;
+    }
+    .friend-main{
+        display: flex;
+        padding: 0.8rem 0;
+        
+        img{
+            @include profile-pic;
+            height: 3rem;
+            width: 3rem;
+        }
+        
+        div{
+            width: 100%;
+            justify-content: space-between;
+            
+            h5{
+                font-size: 1.1rem;
+                font-weight: 600;
+            }
+            i{
+                font-size: 0.7rem;
+                margin-left: 0.3rem;
+                margin-top: 5px;
+            }
+            h6{
+                font-weight: 400;
+                font-size: 0.8rem;
+                color: darken($grey1-color, 50%);
+                padding: 0.5rem 0;
+            }
+
+            button{
+                background: $blue-color;
+                color: $white-color;
+                border: none;
+                border-radius: 8px;
+                font-size: 1.1rem;
+                padding: 0.4rem 1rem;
+            }
+            button:nth-child(2){
+                background: $grey1-color;
+                color: darken($grey-color, 100%);
+                margin-left: 0.4rem;
+            }
+
+
+        }
+    }
+
+    .friend-list{
+        small{
+           position: relative;
+        }
+        small::after { 
+            @include profile-pic-after;
+            width: 6px;
+            height:6px;
+            bottom: 3px;
+        }
+        span{
+         display: flex;   
+        }
+
+        .contact-icon{
+            display: flex;
+            justify-content: space-between;
+            width: 7rem;
+        }
+       div{
+           display: flex;
+           padding-top: 1rem ;
+           align-items: center;
+           
+           h6{
+               font-size: 1.1rem;
+               color: #000;
+           }
+           img{
+                @include profile-pic;
+                width: 2.4rem;
+
+              
+           }
+          
+           
+       }
+    }
+
+    .friend-footer{
+        span{
+            display: flex;
+            align-items: center;
+            i{
+                margin-right: 0.8rem;
+                @include icon1;
+            }
+            h6{
+                color: #000;
+                font-size: 1.1rem;
+                margin: 0.8rem 0;
+            }
+        }
+    }
+    
+}

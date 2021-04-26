@@ -1,0 +1,163 @@
+.header{
+    position: fixed;
+    display: flex;
+    width: 100%;
+    padding: 0 0.7rem;
+    justify-content: space-evenly;
+    background: $white-color;
+    height: 3.4rem;
+    z-index: 10;
+    box-shadow: $box-shadow;
+    i{
+        color: $grey-color;
+        display: flex;
+        align-items: center;
+        position: relative;
+        
+        sup{
+            background: $red-color;
+            color: $white-color;
+            font-size: 12px;
+            position: absolute;
+            top: 2px;
+            right: 17px;
+            border-radius: 10px;
+            padding: 3px 5px;
+            line-height: 1;
+            font-weight: bold;
+            font-style: normal;
+        }
+    }
+    &-first{
+        flex:1;
+        display: flex;
+        align-items: center;
+    
+       i{
+           color: $white-color;
+       }
+       
+        .ion-android-search{
+            display: flex;
+            position: absolute;
+            font-size: 1.3rem;
+            z-index: 2;
+            left: 71px;
+            padding-top: 5px;
+          }
+        input{
+            height: 2.3rem;
+            width: 15rem;
+            border: 1px solid $grey2-color;
+            border-radius: 100px;
+            padding: 1rem;
+            color: $grey-color;
+            background: #fff;
+            font-size: 0.9rem;
+            margin: 10px 0;
+            padding-right: 1.5rem;
+            background-image: url("/searchicon.png");
+            background-position: 8px 8px; 
+            background-repeat: no-repeat;
+            padding-left: 2.3rem;
+        }
+
+        .ion-android-menu{
+            display: none;
+        }
+    }
+
+    &-second{
+        flex:2;
+        display: flex;
+        justify-content: center;
+        
+        div{
+            display: flex;
+        }
+
+        i{
+            font-size: 2rem;
+            padding: 0 2rem;
+            position: relative;
+
+            
+        }
+        i:nth-child(1){
+            color: $blue-color;
+            border-bottom: 3px solid $blue-color;
+        }
+    }
+    &-third{
+        flex:1;
+        display: flex;
+        justify-content: flex-end;
+        i{
+           @include icon1;
+            
+            sup{
+                right: -5px;
+                top: -5px;
+            }
+        }
+        small{
+            display: flex;
+            align-items: center;
+            font-size: 1.5rem;
+            color: $grey-color;
+            img{
+                @include profile-pic;
+            }
+        }
+        
+    }
+   
+}
+
+@media only screen and (max-width:1200px){
+   .header{
+        input{
+            width: 1rem; 
+         }
+         small{
+             display: none;
+         }
+}
+}
+
+
+@media only screen and (max-width:900px){
+    .header{
+         input{
+             width: 1rem; 
+          }
+          small{
+              display: none;
+          }
+          &-first{
+              input{
+                  margin-right:1rem;
+              }
+              
+            .ion-android-menu
+            {
+                display: flex;
+                background: none;
+                color: $grey-color;
+                border-radius: 0;
+                font-size: 2rem;
+                padding-bottom: 0.2rem;
+                transform: scaleX(-0.9) scaleY(1.3);
+                }
+            }
+          &-second{
+            
+            div{
+                display: none;
+                }
+            }
+
+            
+      
+ }
+ }

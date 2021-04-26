@@ -1,0 +1,101 @@
+$black1-color:#18191a;
+$black2-color:#242526;
+$black3-color:#3a3b3c;
+$grey-color:#65676b;
+$grey1-color:#d9dbdf;
+$grey2-color:#e4e6eb;
+$grey3-color:#f0f2f5;
+$blue-color:#0777e9;
+$lightblue-color:#e7f3ff;
+$red-color:#f02849;
+$green-color:#45bd62;
+$yellow-color:#f7b928;
+$white-color:#fff;
+$box-shadow:0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+$blue-gradient:linear-gradient(-90deg,#4f68de, #7837ca);
+
+// Icon Styles
+
+@mixin icon1 {
+    margin: 0.5rem;
+    padding: 0.2rem 0.7rem;
+    border-radius: 100px;
+    background: $grey2-color;
+    color: #000;
+    font-size: 1.5rem;
+}
+
+@mixin profile-pic{
+    width: 1.8rem;
+    border-radius: 100%;
+    margin-right: 0.8rem;
+}
+
+@mixin feeds {
+    background: #fff;
+    width: 100%;
+    margin-top: 1.5rem;
+    padding: 0.5rem;
+    padding-top: 1rem;
+    border-radius: 10px;
+    box-shadow: $box-shadow;
+    border: solid 1px $grey3-color;
+    
+}
+
+@mixin arrow-btn {
+    position: absolute;
+    right: -18px;
+    top:80px;
+    background: #fff;
+    font-size: 1.7rem;
+    border-radius: 100%;
+    padding: 0.5rem 1rem;
+    color: $grey-color;
+    box-shadow: $box-shadow;
+}
+
+@mixin profile-pic-after {
+    content: '';
+    width: 8px;
+    height:8px;
+    border: 3px solid #fff;
+    border-radius: 100%;
+    background: $green-color;
+    display: block;
+    position: absolute;
+    bottom: 5px;
+    right: 10px;
+}
+
+
+.ion-social-facebook{
+    background: $blue-color;
+    color: #fff;
+    font-size: 2.3rem;
+    width: 2.5rem;
+    height: 2.5rem;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    border-radius: 100px;
+    margin-right: 0.5rem;
+}
+.ion-android-more-horizontal
+{
+    font-size: 1.7rem;
+    margin-right: 0.5rem;
+    display: flex;
+    align-items: flex-start;
+    color: $grey-color;
+}
+
+.ion-videocamera,
+.ion-ios-search-strong{
+    font-size: 1.4rem;
+    color: $grey-color;
+}
+
+
+
+

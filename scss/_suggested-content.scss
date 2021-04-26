@@ -1,0 +1,86 @@
+.suggested-content{
+    @include feeds;
+    width: auto;
+    overflow-x: scroll;
+    overflow-x: hidden;
+
+
+    span:nth-child(1){
+        display: flex;
+        justify-content: space-between;
+    }
+    span:nth-child(2){
+        h4{
+            font-size: 1.7rem;
+            padding: 0.5rem 0;
+        }
+        small{
+            font-size: 1.1rem;
+        }
+    }
+    .suggested-grid{
+        @include feeds;
+        margin: 0 0.5rem;
+       span:nth-child(1){
+        border-bottom: 1px solid $grey2-color;
+        position: relative;
+            img{
+            border-right: 1px solid $grey2-color;
+            width: 30%;
+            }
+            i{
+                position: absolute;
+                right: 5px;
+                top: 5px;
+                font-size: 2rem;
+                padding: 0 1rem;
+                background: rgba($color: #000000, $alpha: 0.3);
+                color: $white-color;
+                border-radius: 50px;
+            }
+        }
+        span:nth-child(2){
+            display: flex;
+            align-items: center;
+            img{
+                @include profile-pic;
+                width: 3rem;
+            }
+            h6{
+                font-size: 1.2rem;
+                font-weight: 500;
+            }
+        }
+        small{
+            color: $grey-color;
+            font-size: 1px;
+            padding: 1rem;
+            display: flex;
+        }
+        button{
+            display: flex;
+            width: 95%;
+            margin:auto;
+            justify-content: center;
+            align-items: center;
+            background: $lightblue-color;
+            color: $blue-color;
+            border: none;
+            border-radius: 10px;
+            padding: 0.5rem;
+            font-size: 1.1rem;
+            font-weight: 600;
+            
+            i{
+            font-size: 1.5rem;
+            margin-right: 0.7rem;
+            }
+        }
+    }
+    .grid{
+        display: flex;
+        justify-content: space-between;
+        overflow:scroll;
+        max-width: 50rem;
+    }
+}

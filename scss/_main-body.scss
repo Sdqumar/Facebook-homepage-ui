@@ -1,0 +1,120 @@
+.main-body-content{
+    width: 77%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    margin: auto;
+
+    .update-status{
+        @include feeds;
+
+        
+        div{
+            display: flex;
+            
+            img{
+                @include profile-pic;
+                width: 2.8rem;
+            }
+            input{
+                border-radius: 50px;
+                border: none;
+                padding: 0.5rem 0.8rem;
+                font-size: 1.2rem;
+                background: $grey3-color;
+                width: 90%;
+            }
+        }
+        div:nth-child(2){
+            border-top: 2px solid $grey3-color;
+            margin-top: 0.8rem;
+            justify-content: space-evenly;
+            align-items: center;
+            font-size: 1.3rem;
+            font-weight: 500;
+            color: $grey-color;
+            
+            span{
+                padding: 0.3rem;
+                padding-top: 0;
+                border-radius: 50px;
+                margin-top: 0.5rem;
+                display: flex;
+                align-items: center;
+            }
+            .ion-ios-videocam{
+                color: $red-color;
+                font-size: 1.8rem;
+                padding-right: 0.5rem;
+            }
+            .ion-images{
+                color: $green-color;
+                font-size: 1.8rem;
+                padding-right: 0.5rem;
+            }
+            .ion-android-happy{
+                color: $yellow-color;
+                font-size: 1.8rem;
+                padding-right: 0.5rem;
+            }
+            span:hover{
+                background: $grey3-color;
+               
+            }
+        }
+
+    }
+
+    .create-room{
+       @include feeds;
+       display: flex;
+       align-items: center;
+       position: relative;
+
+       span{
+          display: flex;
+          align-items: center;
+          
+          .ion-videocamera{
+            font-size: 1.5rem;
+            padding-right: 0.5rem;
+            color: $blue-color;
+          }
+          img{
+              @include profile-pic;
+              width: 2.7rem;
+          }
+       } 
+        span:nth-child(2){
+            width: 60%;
+            overflow: hidden;
+
+            small{
+            position: relative;
+        }
+            small::after { 
+                @include profile-pic-after
+            }
+       }
+       span:nth-child(1){
+           border: 3px  solid $lightblue-color;
+           border-radius: 50px;
+           padding: 0.1rem 0.5rem;
+           margin-right: 1rem;
+           
+           small{
+                font-size: 1rem;
+                font-weight: 500;
+                color: $blue-color;
+           }
+       }
+       .ion-ios-arrow-right{
+           @include arrow-btn;
+           top: 10px;
+            width: 3rem;
+            text-align: center;
+            right: 15px;
+        }
+    }
+
+}
